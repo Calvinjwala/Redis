@@ -19,4 +19,27 @@ Redis also handles hashes. You can also increment numerical values within hashes
 You can search with exclusion (i.e. search for X, but exclude Y).
 
 Redis is best used for instant analysis --> it cuts the time to process events since it lives in the 
-Use Redis for your aggregates since it can all be done on one machine.
+Use Redis for your aggregates since it can all be done on one machine. It allows for a faster database. It gives different access patterns that is typical with a relational database.
+
+It's good for:
+-Analytics
+- Task Queues         - Small Data
+- Distributed Locks   - Bigger Data 
+- Caching             - Geo searches
+- Data that expires   - Configuration Management
+- Cookie storage      - Content distribution
+- Search engines
+- Ad targeting
+- Forums
+- Messaging
+- High-IO workloads
+
+When Redis does really well...
+- When your data model doesn't fit in a relational model very well
+- When you have high IO requirements
+- When your data fits in memory, or your problem can be sharded
+- When you understand Redis' limitations when it comes to data durability
+
+
+Redis is not a database - it's a database construction kit. You have to build the functionality through Redis. It includes a cache server, messaging server, and aggregate server (incr function allows this)
+It is a shared-memory api server.
